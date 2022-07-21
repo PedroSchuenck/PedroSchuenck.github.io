@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Currículo>
+<Pessoa>
+<Nome>Pedro Gabriel Schuenck bittencourt</Nome>
+<Idade>Tenho 16 anos</Idade>
+<Data-Nascimento>30/06/2006</Data-Nascimento>
+<gênero>Masculino</gênero>
+<CPF>XXX.XXX.XXX-XX</CPF>
+<localidade>
+<Pais>Brasil</Pais>
+<Estado>Rio de janeiro</Estado>
+<Cidade>Nova friburgo</Cidade>
+<Endereço>Rua joão josé de cerqueira - 116</Endereço>
+</localidade>
+<telefones>
+<telefone>25276079</telefone>
+<Telefone>22 997431359</Telefone>
+</telefones>
+<E-mails>
+<E-mail>Pedro.bittencourt@aluno.cefet-rj.br</E-mail>
+<E-mail>Pschuenckbittencourt@gmail.com</E-mail>
+</E-mails>
+</Pessoa>
+<Objetivos-pessoais>
+<Objetivo>Com as minhas habilidades comportamentais e a experiência atingida ao longo dos anos aqui no cefet, desejo estar em uma empresa em que possa contribuir para o desenvolvimento de projetos inovadores na área de tecnologia.</Objetivo>
+<Objetivo>Minha carreira está no início, mas estou em busca de uma oportunidade para demonstrar meu talento e minhas habilidades. Acredito que possa compensar a falta de experiência no trabalho com dedicação e empenho.</Objetivo>
+</Objetivos-pessoais>
+<Objetivos-profissionais>
+<Objetivo>Colaborar em um ambiente de trabalho onde possa colocar em pratica meus conhecimentos em favor da instituição na qual viso integrar, focando sempre o beneficio e o crescimento da organização e o crescimento profissional.</Objetivo>
+<Objetivo>Usar meus conhecimentos técnicos em um ambiente empresarial abrangente para crescer com a organização e ajudá-la a ser competitiva e lucrativa</Objetivo>
+</Objetivos-profissionais>
+<Formação-acadêmica>
+<formação>Sou estudante do Cefet, cursando o 1° ano, integrado ao Técnico de informática</formação>
+</Formação-acadêmica>
+</Currículo>
