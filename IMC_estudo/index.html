@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body>
+    <h1 id="titulo">Cálculo do seu IMC</h1>
+    <table id="tabela" border="1">
+    <tr>
+        <h2 class="titulo2">Tabela IMC</h2>
+        <th><label for="peso">peso</label></th>
+        <th><label for="altura">Altura</label></th>
+        <th>Resultado</th>
+    </tr>
+    <tr>
+        <td>Digite seu Peso: <input type="text" id="peso"></td>
+        <td>Digite sua Altura: <input type="text" id="altura"></td>
+        <td  id="resultado"></td>
+        
+    </tr>
+    <tr>
+        <td colspan="3" id="calculo"><input type="submit" value="Cálculo do IMC" onclick="IMC()"></td>
+    </tr>
+    </table>
+
+    <h2 class="titulo2">Tabela de classificação IMC</h2>
+    <table border="1">
+        <tr>
+            <th>IMC</th>
+            <th>Classificação do IMC</th>
+        </tr>
+        <tr>
+            <td id="resultado2"></td>
+            <td id="resultado3"></td>
+        </tr>
+    </table>
+</body>
+</html>
