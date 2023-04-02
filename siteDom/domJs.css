@@ -1,0 +1,93 @@
+#titulo{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    color: white;
+    margin-top: -8%;
+    font-size: 250%;
+}
+body{
+    background-color: black;
+}
+img{
+    width: 12%;
+    margin-top: 2%;
+}
+#titulo-main{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    color: white;
+    margin-top: 1%;
+    font-size: 250%;    
+}
+
+@media((min-width:320px) and (max-width:480px)){
+#titulo{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    color: white;
+    margin-top: 5%;
+    font-size: 150%;
+    text-decoration: underline;
+    
+}
+
+#img1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    size: 100%;
+}
+#titulo-main{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    color: white;
+    margin-top: 5%;
+    font-size: 150%;
+    text-align: center;
+}
+
+
+}
+.botao{
+    background-color: black;
+    border-color: white;
+    padding: 10px 20px; 
+    text-align: center; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 5px 4px; 
+    cursor: pointer; 
+    border-radius: 10px; 
+    transition-duration: 0.4s; 
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+@media((min-width:320px) and (max-width:480px)){
+    .botao{
+        background-color: black;
+        border-color: white;
+        padding: 10px 20px; 
+        text-align: center; 
+        display: inline-block; 
+        font-size: 10px; 
+        margin: 5px 4px; 
+        cursor: pointer; 
+        border-radius: 10px; 
+        transition-duration: 0.4s;
+        
+        
+}
+#botao-main{
+    display: flex;
+    flex-direction: column;
+}
+}
+#botao-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
