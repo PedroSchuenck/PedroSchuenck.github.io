@@ -1,0 +1,50 @@
+
+#resultado{
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+}
+.botao{
+    background-color: 	#A9A9A9;
+    border-color: white;
+    padding: 10px 20px; 
+    text-align: center; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 5px 5px; 
+    cursor: pointer; 
+    border-radius: 20px; 
+    transition-duration: 0.4s; 
+    border-style: inherit;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#result1{
+    width: 10px;
+    height: 5px;
+    background-color: red;
+}
+#result2{
+    width: 10px;
+    height: 5px;
+    background-color: orangered;
+}
+#result3{
+    width: 10px;
+    height: 5px;
+    background-color: green;
+}
+
+#box{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li{
+    list-style: none;
+    padding: 15px;
+}
