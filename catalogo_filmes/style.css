@@ -112,7 +112,7 @@ body{
   .faixa-vermelho {
     background-color: red;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     #title-header {
       text-align: center;
       color: rgb(255, 255, 255);
