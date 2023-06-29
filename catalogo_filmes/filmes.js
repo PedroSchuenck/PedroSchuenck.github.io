@@ -6,6 +6,8 @@ async function getFilmes() {
       let filmesHTML = '';
   
       filmes.forEach(filme => {
+        let divOpiniao = document.createElement('div');
+        let filmesDiv = document.createElement('div');
         filmesHTML += '<div class="filme">';
         filmesHTML += '<img src="' + filme.figura + '" alt="' + filme.titulo + '" class="imagem">';
         filmesHTML += '<h2 class="titulo">' + filme.titulo + '</h2>';
@@ -20,8 +22,16 @@ async function getFilmes() {
         filmesHTML += '<p class="faixa-etaria faixa-' + getClassificacaoCor(filme.classificacao) + '"></p>';
         filmesHTML += '<p class="campo-titulo">Elenco:</p>';
         filmesHTML += '<p class="elenco">' + (filme.elenco || '') + '</p>';
-        filmesHTML += '</div>';        
+        filmesHTML += '<p class="campo-titulo">Opiniões:</p>';
+        filme.opinioes.forEach(opiniao =>{
+          filmesHTML += '<div id="opinioes-rating">' + opiniao["rating"] + ' ' + opiniao["descricao"] + '</div>';
+        })
+        filmesHTML += '</div>';    
+        // filmesHTML.appendChild(divOpiniao);
       });
+
+
+
       function getClassificacaoCor(classificacao) {
         if (classificacao <= 14) {
           return 'verde';
