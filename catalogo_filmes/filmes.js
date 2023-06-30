@@ -24,10 +24,10 @@ async function getFilmes() {
         filmesHTML += '<p class="elenco">' + (filme.elenco || '') + '</p>';
         filmesHTML += '<p class="campo-titulo">Opiniões:</p>';
         filme.opinioes.forEach(opiniao =>{
-          filmesHTML += '<div id="opinioes-rating">' + opiniao["rating"] + ' ' + opiniao["descricao"] + '</div>';
+        filmesHTML += '<div id="opinioes-rating">' + opiniao["rating"] + ' ' + opiniao["descricao"] + '</div>';
+        
         })
         filmesHTML += '</div>';    
-        // filmesHTML.appendChild(divOpiniao);
       });
 
 
