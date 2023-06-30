@@ -10,6 +10,7 @@ body{
   font-family: 'Times New Roman', Times, serif;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
+  margin-bottom: 70px;
 }
 
 #title-header:hover {
@@ -40,7 +41,7 @@ body{
     margin: 0 auto;
     width: 90%;
     color: black;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     padding: 10px;
     background-color:#6cbad7;
     text-align: center;
@@ -56,7 +57,7 @@ body{
     font-size: 50px;
     font-weight: normal;
     font-family: 'Times New Roman', Times, serif;
-    margin-top: -150px;
+    margin-top: -100px;
   }
   
   .campo-titulo {
@@ -126,10 +127,7 @@ body{
       width: 80%;
       padding: 20px;
       margin: 0 auto;
-      margin-bottom: 50px
-
     }
-  
     .imagem {
       width: 70%;
       margin: 0 auto;
@@ -154,8 +152,11 @@ body{
   }
   
   #opinioes-rating{
-      margin-top: 20px;
-      font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
   }
 
 

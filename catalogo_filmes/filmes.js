@@ -1,10 +1,11 @@
-async function getFilmes() {
+
+  async function getFilmes() {
     try {
       const response = await fetch('https://rafaelescalfoni.github.io/desenv_web/filmes.json');
       const filmes = await response.json();
-  
+
       let filmesHTML = '';
-  
+
       filmes.forEach(filme => {
         let divOpiniao = document.createElement('div');
         let filmesDiv = document.createElement('div');
@@ -23,14 +24,11 @@ async function getFilmes() {
         filmesHTML += '<p class="campo-titulo">Elenco:</p>';
         filmesHTML += '<p class="elenco">' + (filme.elenco || '') + '</p>';
         filmesHTML += '<p class="campo-titulo">Opiniões:</p>';
-        filme.opinioes.forEach(opiniao =>{
-        filmesHTML += '<div id="opinioes-rating">' + opiniao["rating"] + ' ' + opiniao["descricao"] + '</div>';
-        
-        })
-        filmesHTML += '</div>';    
+        filme.opinioes.forEach(opiniao => {
+          filmesHTML += '<div id="opinioes-rating">' + getRatingEstrelas(opiniao.rating) + ' ' + opiniao.descricao + '</div>';
+        });
+        filmesHTML += '</div>';
       });
-
-
 
       function getClassificacaoCor(classificacao) {
         if (classificacao <= 14) {
@@ -41,14 +39,27 @@ async function getFilmes() {
           return 'vermelho';
         }
       }
+
+      function getRatingEstrelas(numeroEstrelas) {
+        const inteiro = Math.floor(numeroEstrelas);
+        const decimal = numeroEstrelas - inteiro;
+        let estrelas = '';
+        for (let i = 0; i < inteiro; i++) {
+          estrelas += '<i class="bi bi-star-fill"></i>';
+        }
+        if (decimal >= 0.5) {
+          estrelas += '<i class="bi bi-star-half"></i>';
+        }
+        return estrelas;
+      }
       
-  
       const domFilmes = document.getElementById('filmes');
       domFilmes.innerHTML = filmesHTML;
     } catch (error) {
       console.error('Ocorreu um erro ao buscar os filmes:', error);
     }
   }
-  
+
   getFilmes();
-  
+
+
