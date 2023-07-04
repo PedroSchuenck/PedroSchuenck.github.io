@@ -11,7 +11,7 @@ https.onreadystatechange = function() {
             let button = document.createElement('button');
             button.setAttribute('class', 'btn-img');
             button.addEventListener('click', function() {
-                showModal(filme, filmes);
+                showModal(filme, filmes, index + 1); // Ajuste do índice
             });
 
             let divImg = document.createElement('div');
@@ -28,7 +28,7 @@ https.onreadystatechange = function() {
     }
 };
 
-function showModal(filme, filmes) {
+function showModal(filme, filmes, index) {
     let modal = document.createElement('div');
     modal.setAttribute('class', 'modal fade');
     modal.setAttribute('id', 'exampleModal');
@@ -65,11 +65,12 @@ function showModal(filme, filmes) {
     titulosSemelhantes.innerHTML = "<strong>Títulos Semelhantes:</strong> ";
 
     filme.titulosSemelhantes.forEach(indice => {
-        let tituloSemelhante = filmes[indice].titulo;
-        titulosSemelhantes.innerHTML += tituloSemelhante + ", ";
+        let Imgtitulos = document.createElement('img');
+        let tituloSemelhante = filmes[indice - 1].figura; // Ajuste do índice
+        Imgtitulos.setAttribute('src', tituloSemelhante);
+        Imgtitulos.setAttribute('class', 'imgTitulos');
+        titulosSemelhantes.appendChild(Imgtitulos);
     });
-
-    titulosSemelhantes.innerHTML = titulosSemelhantes.innerHTML.slice(0, -2);
 
     let classificacao = document.createElement('p');
     classificacao.innerHTML = "<strong>Classificação:</strong> " + (filme.classificacao === 0 ? "Livre" : filme.classificacao);
@@ -125,21 +126,22 @@ function getFaixaEtariaClass(classificacao) {
 }
 
 function getAverageRating(opinioes) {
-  let totalRating = 0;
-  for (let i = 0; i < opinioes.length; i++) {
-    totalRating += opinioes[i].rating;
-  }
-  return totalRating / opinioes.length;
+    let totalRating = 0;
+    for (let i = 0; i < opinioes.length; i++) {
+        totalRating += opinioes[i].rating;
+    }
+    return totalRating / opinioes.length;
 }
 
 function getStarRating(rating) {
-  let stars = "";
-  let roundedRating = Math.round(rating);
-  for (let i = 0; i < roundedRating; i++) {
-    stars += "&#9733;"; // Código HTML para uma estrela cheia
-  }
-  for (let i = roundedRating; i < 5; i++) {
-    stars += "&#9734;"; // Código HTML para uma estrela vazia
-  }
-  return stars;
+    let stars = "";
+    let roundedRating = Math.round(rating);
+    for (let i = 0; i < roundedRating; i++) {
+        stars += "&#9733;";
+    }
+    for (let i = roundedRating; i < 5; i++) {
+        stars += "&#9734;";
+    }
+    return stars;
 }
+

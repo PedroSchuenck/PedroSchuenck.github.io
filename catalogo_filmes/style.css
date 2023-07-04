@@ -176,3 +176,8 @@
         font-size: 18px;
       }
     }
+    .imgTitulos{
+      width: 100px;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
