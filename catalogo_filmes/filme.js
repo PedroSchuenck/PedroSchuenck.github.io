@@ -11,7 +11,7 @@ https.onreadystatechange = function() {
             let button = document.createElement('button');
             button.setAttribute('class', 'btn-img');
             button.addEventListener('click', function() {
-                showModal(filme, filmes, index + 1); // Ajuste do índice
+                showModal(filme, filmes);
             });
 
             let divImg = document.createElement('div');
@@ -28,7 +28,7 @@ https.onreadystatechange = function() {
     }
 };
 
-function showModal(filme, filmes, index) {
+function showModal(filme, filmes) {
     let modal = document.createElement('div');
     modal.setAttribute('class', 'modal fade');
     modal.setAttribute('id', 'exampleModal');
@@ -37,7 +37,7 @@ function showModal(filme, filmes, index) {
     modal.setAttribute('aria-hidden', 'true');
 
     let modalDialog = document.createElement('div');
-    modalDialog.setAttribute('class', 'modal-dialog');
+    modalDialog.setAttribute('class', 'modal-dialog modal-dialog-centered');
     let modalContent = document.createElement('div');
     modalContent.setAttribute('class', 'modal-content');
 
@@ -66,11 +66,13 @@ function showModal(filme, filmes, index) {
 
     filme.titulosSemelhantes.forEach(indice => {
         let Imgtitulos = document.createElement('img');
-        let tituloSemelhante = filmes[indice - 1].figura; // Ajuste do índice
+        let tituloSemelhante = filmes[indice].figura;
         Imgtitulos.setAttribute('src', tituloSemelhante);
-        Imgtitulos.setAttribute('class', 'imgTitulos');
+        Imgtitulos.setAttribute('class' ,'imgTitulos');
         titulosSemelhantes.appendChild(Imgtitulos);
     });
+
+    titulosSemelhantes.innerHTML = titulosSemelhantes.innerHTML.slice(0, -2);
 
     let classificacao = document.createElement('p');
     classificacao.innerHTML = "<strong>Classificação:</strong> " + (filme.classificacao === 0 ? "Livre" : filme.classificacao);
@@ -126,22 +128,30 @@ function getFaixaEtariaClass(classificacao) {
 }
 
 function getAverageRating(opinioes) {
-    let totalRating = 0;
-    for (let i = 0; i < opinioes.length; i++) {
-        totalRating += opinioes[i].rating;
+    if (opinioes.length === 0) {
+        return 0;
     }
+
+    let totalRating = opinioes.reduce((sum, opiniao) => sum + opiniao.rating, 0);
     return totalRating / opinioes.length;
 }
 
 function getStarRating(rating) {
     let stars = "";
-    let roundedRating = Math.round(rating);
-    for (let i = 0; i < roundedRating; i++) {
-        stars += "&#9733;";
+    let fullStars = Math.floor(rating);
+    let halfStar = rating - fullStars >= 0.5;
+
+    for (let i = 0; i < fullStars; i++) {
+        stars += "&#9733;"; // Código HTML para uma estrela cheia
     }
-    for (let i = roundedRating; i < 5; i++) {
-        stars += "&#9734;";
+
+    if (halfStar) {
+        stars += "&#9733;&#189;"; // Código HTML para uma estrela cortada ao meio
+    } else {
+        for (let i = fullStars; i < 5; i++) {
+            stars += "&#9734;"; // Código HTML para uma estrela vazia
+        }
     }
+
     return stars;
 }
-
