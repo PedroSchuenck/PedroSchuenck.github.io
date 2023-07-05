@@ -66,13 +66,11 @@ function showModal(filme, filmes) {
 
     filme.titulosSemelhantes.forEach(indice => {
         let Imgtitulos = document.createElement('img');
-        let tituloSemelhante = filmes[indice].figura;
+        let tituloSemelhante = filmes[indice - 1].figura;
         Imgtitulos.setAttribute('src', tituloSemelhante);
-        Imgtitulos.setAttribute('class' ,'imgTitulos');
+        Imgtitulos.setAttribute('class', 'imgTitulos');
         titulosSemelhantes.appendChild(Imgtitulos);
     });
-
-    titulosSemelhantes.innerHTML = titulosSemelhantes.innerHTML.slice(0, -2);
 
     let classificacao = document.createElement('p');
     classificacao.innerHTML = "<strong>Classificação:</strong> " + (filme.classificacao === 0 ? "Livre" : filme.classificacao);
@@ -155,3 +153,4 @@ function getStarRating(rating) {
 
     return stars;
 }
+

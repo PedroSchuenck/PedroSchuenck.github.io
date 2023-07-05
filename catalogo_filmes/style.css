@@ -175,6 +175,13 @@
       .btn-close {
         font-size: 18px;
       }
+
+  .modal-dialog.modal-dialog-centered {
+    position: fixed;
+    width: 100%;
+    margin-left: 20px;
+  }
+
     }
     .imgTitulos{
       width: 100px;
