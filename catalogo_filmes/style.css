@@ -176,15 +176,15 @@
         font-size: 18px;
       }
 
-  .modal-dialog.modal-dialog-centered {
-    position: fixed;
-    width: 100%;
-    margin-left: 20px;
-  }
+      .modal-dialog.modal-dialog-centered {
+      position: fixed;
+      width: 100%;
+      margin-left: 25px;
+      }
 
-    }
-    .imgTitulos{
+      }
+      .imgTitulos{
       width: 100px;
       border-radius: 10px;
       margin-right: 10px;
-    }
+      }
