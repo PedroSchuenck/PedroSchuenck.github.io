@@ -138,15 +138,10 @@ https.onreadystatechange = function() {
             for (let i = 0; i < fullStars; i++) {
                     stars += "&#9733;"; // Código HTML para uma estrela cheia
                 }
-            
-            if (halfStar) {
-                stars += "&#9733;&#189;"; // Código HTML para uma estrela cortada ao meio
-                } else {
                 for (let i = fullStars; i < 5; i++) {
                     stars += "&#9734;"; // Código HTML para uma estrela vazia
                 }
-                }
-            
+                }  
                 return stars;
             }
         });
