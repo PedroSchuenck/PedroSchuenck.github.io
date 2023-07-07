@@ -148,11 +148,7 @@ https.onreadystatechange = function() {
                 }
 
                 return stars;
-            }
-        };
-    }
 
-    return stars;
 }
 };
 
