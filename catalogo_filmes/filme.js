@@ -150,5 +150,5 @@ https.onreadystatechange = function() {
                 return stars;
 
 }
-};
+});
 
