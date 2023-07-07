@@ -130,15 +130,15 @@ https.onreadystatechange = function() {
             return totalRating / opinioes.length;
         }
             
-    function getStarRating(rating) {
+        function getStarRating(rating) {
             let stars = "";
             let fullStars = Math.floor(rating);
             let halfStar = rating - fullStars >= 0.5;
-        
+
             for (let i = 0; i < fullStars; i++) {
                     stars += "&#9733;"; // Código HTML para uma estrela cheia
                 }
-            
+
             if (halfStar) {
                 stars += "&#9733;&#189;"; // Código HTML para uma estrela cortada ao meio
                 } else {
@@ -146,9 +146,13 @@ https.onreadystatechange = function() {
                     stars += "&#9734;"; // Código HTML para uma estrela vazia
                 }
                 }
-            
+
                 return stars;
+            }
         });
     }
+
+    return stars;
+}
 };
 
