@@ -138,12 +138,8 @@ https.onreadystatechange = function() {
             for (let i = 0; i < fullStars; i++) {
                     stars += "&#9733;"; // Código HTML para uma estrela cheia
                 }
-                for (let i = fullStars; i < 5; i++) {
-                    stars += "&#9734;"; // Código HTML para uma estrela vazia
-                }
-                }  
+            
                 return stars;
-            }
         });
     }
 };
