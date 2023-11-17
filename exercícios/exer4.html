@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocultar/Mostrar Parágrafo</title>
+  <script>
+    function toggleParagraph() {
+      var paragraph = document.getElementById("myParagraph");
+      paragraph.style.display = (paragraph.style.display === "none" || paragraph.style.display === "") ? "block" : "none";
+    }
+  </script>
+</head>
+<body>
+  <p id="myParagraph">Este é um parágrafo.</p>
+  <button onclick="toggleParagraph()">Ocultar/Mostrar</button>
+</body>
+</html>

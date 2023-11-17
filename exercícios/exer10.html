@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operações com Números</title>
+  <script>
+    function performOperations() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var num3 = parseFloat(document.getElementById("num3").value);
+
+      var sum = num1 + num2 + num3;
+      var average = sum / 3;
+      var product = num1 * num2 * num3;
+      var maxNum = Math.max(num1, num2, num3);
+      var minNum = Math.min(num1, num2, num3);
+
+      document.getElementById("sum").innerHTML = "Soma: " + sum;
+      document.getElementById("average").innerHTML = "Média: " + average;
+      document.getElementById("product").innerHTML = "Produto: " + product;
+      document.getElementById("maxNum").innerHTML = "Maior Número: " + maxNum;
+      document.getElementById("minNum").innerHTML = "Menor Número: " + minNum;
+    }
+  </script>
+</head>
+<body>
+  <label>Número 1:</label>
+  <input type="text" id="num1" onkeypress="validateNumberInput(event)"><br>
+
+  <label>Número 2:</label>
+  <input type="text" id="num2" onkeypress="validateNumberInput(event)"><br>
+
+  <label>Número 3:</label>
+  <input type="text" id="num3" onkeypress="validateNumberInput(event)"><br>
+
+  <button onclick="performOperations()">Calcular</button><br>
+
+  <div id="sum"></div>
+  <div id="average"></div>
+  <div id="product"></div>
+  <div id="maxNum"></div>
+  <div id="minNum"></div>
+</body>
+</html>

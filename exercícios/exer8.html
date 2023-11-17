@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Cliente</title>
+  <script>
+    function toggleCPF() {
+      var cpfInput = document.getElementById("cpf");
+      cpfInput.disabled = !document.getElementById("pessoaFisica").checked;
+    }
+
+    function toggleCNPJ() {
+      var cnpjInput = document.getElementById("cnpj");
+      cnpjInput.disabled = !document.getElementById("pessoaJuridica").checked;
+    }
+
+    function validateNumberInput(event) {
+      var charCode = event.which || event.keyCode;
+      if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        event.preventDefault();
+      }
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label>Nome:</label>
+    <input type="text" name="nome"><br>
+
+    <label>Pessoa:</label>
+    <input type="radio" name="pessoa" id="pessoaFisica" onclick="toggleCPF()"> Física
+    <input type="radio" name="pessoa" id="pessoaJuridica" onclick="toggleCNPJ()"> Jurídica<br>
+
+    <label>CPF:</label>
+    <input type="text" id="cpf" name="cpf" onkeypress="validateNumberInput(event)"><br>
+
+    <label>CNPJ:</label>
+    <input type="text" id="cnpj" name="cnpj" onkeypress="validateNumberInput(event)"><br>
+
+    <label>Data de Nascimento:</label>
+    <input type="date" name="dataNascimento" id="dataNascimento"><br>
+
+    <label>Endereço:</label>
+    <input type="text" name="endereco"><br>
+
+    <label>CEP:</label>
+    <input type="text" name="cep" onkeypress="validateNumberInput(event)"><br>
+
+    <label>Telefone:</label>
+    <input type="text" name="telefone" onkeypress="validateNumberInput(event)"><br>
+
+    <label>E-mail:</label>
+    <input type="email" name="email"><br>
+
+    <input type="submit" value="Cadastrar">
+  </form>
+</body>
+</html>

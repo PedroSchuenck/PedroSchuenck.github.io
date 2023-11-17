@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palavras Intercaladas</title>
+  <script>
+    function interleaveWords() {
+      var word1 = document.getElementById("word1").value;
+      var word2 = document.getElementById("word2").value;
+
+      var result = "";
+      for (var i = 0; i < Math.max(word1.length, word2.length); i++) {
+        if (i < word1.length) {
+          result += word1[i];
+        }
+        if (i < word2.length) {
+          result += word2[i];
+        }
+      }
+
+      document.getElementById("result").value = result;
+    }
+  </script>
+</head>
+<body>
+  <label>Palavra 1:</label>
+  <input type="text" id="word1"><br>
+
+  <label>Palavra 2:</label>
+  <input type="text" id="word2"><br>
+
+  <button onclick="interleaveWords()">Interlevar Palavras</button><br>
+
+  <label>Resultado:</label>
+  <input type="text" id="result" disabled>
+</body>
+</html>

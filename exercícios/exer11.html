@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Palavra</title>
+  <script>
+    function searchWord() {
+      var searchText = document.getElementById("searchText").value;
+      var textContent = document.getElementById("textContent").innerHTML;
+      var regex = new RegExp(searchText, "gi");
+
+      var matches = textContent.match(regex);
+
+      if (matches) {
+        document.getElementById("textContent").innerHTML = textContent.replace(regex, '<span style="background-color: yellow;">$&</span>');
+        alert("Encontradas " + matches.length + " ocorrências da palavra.");
+      } else {
+        alert("Nenhuma ocorrência encontrada.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <input type="text" id="searchText">
+    <button type="button" onclick="searchWord()">Pesquisar</button>
+  </form>
+
+  <div id="textContent">
+    Este é um texto de exemplo para realizar a busca de palavras.
+  </div>
+</body>
+</html>

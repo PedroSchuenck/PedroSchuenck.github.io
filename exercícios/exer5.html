@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Usuário</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var form = document.getElementById("userForm");
+      form.addEventListener("submit", function(event) {
+        if (!validateForm()) {
+          event.preventDefault();
+        }
+      });
+
+      function validateForm() {
+        var login = document.getElementById("login").value;
+        var senha = document.getElementById("senha").value;
+        var confirmarSenha = document.getElementById("confirmarSenha").value;
+
+        if (login === "" || senha === "" || confirmarSenha === "") {
+          alert("Todos os campos devem ser preenchidos.");
+          return false;
+        }
+
+        if (senha !== confirmarSenha) {
+          alert("Senha e Confirmar Senha devem ser iguais.");
+          return false;
+        }
+
+        if (senha.length < 6 || senha.length > 10) {
+          alert("A senha deve ter entre 6 e 10 caracteres.");
+          return false;
+        }
+
+        return true;
+      }
+    });
+  </script>
+</head>
+<body>
+  <form id="userForm">
+    <label>Login:</label>
+    <input type="text" id="login" name="login"><br>
+
+    <label>Senha:</label>
+    <input type="password" id="senha" name="senha"><br>
+
+    <label>Confirmar Senha:</label>
+    <input type="password" id="confirmarSenha" name="confirmarSenha"><br>
+
+    <input type="submit" value="Cadastrar">
+  </form>
+</body>
+</html>
