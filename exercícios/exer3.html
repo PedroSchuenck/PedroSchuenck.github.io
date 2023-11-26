@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selecionar Cor</title>
+  <script>
+    function changeColor() {
+      var select = document.getElementById("colorSelect");
+      var color = select.options[select.selectedIndex].value;
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</head>
+<body>
+  <select id="colorSelect" onchange="changeColor()">
+    <option value="red">Vermelho</option>
+    <option value="green">Verde</option>
+    <option value="blue">Azul</option>
+    <option value="yellow">Amarelo</option>
+  </select>
+</body>
+</html>

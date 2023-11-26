@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Imagens</title>
+  <style>
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .enlarged {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+  <script>
+    function enlargeImage(imageId) {
+      var thumbnails = document.getElementsByClassName("thumbnail");
+      for (var i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].classList.remove("enlarged");
+      }
+
+      var enlargedImage = document.getElementById(imageId);
+      enlargedImage.classList.add("enlarged");
+    }
+  </script>
+</head>
+<body>
+  <img src="image1.jpg" alt="Image 1" class="thumbnail" onclick="enlargeImage('image1')">
+  <img src="image2.jpg" alt="Image 2" class="thumbnail" onclick="enlargeImage('image2')">
+  <img src="image3.jpg" alt="Image 3" class="thumbnail" onclick="enlargeImage('image3')">
+  <img src="image4.jpg" alt="Image 4" class="thumbnail" onclick="enlargeImage('image4')">
+
+  <div>
+    <img src="image1.jpg" alt="Image 1" id="image1" class="enlarged">
+    <img src="image2.jpg" alt="Image 2" id="image2" class="enlarged">
+    <img src="image3.jpg" alt="Image 3" id="image3" class="enlarged">
+    <img src="image4.jpg" alt="Image 4" id="image4" class="enlarged">
+  </div>
+</body>
+</html>
