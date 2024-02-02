@@ -1,0 +1,31 @@
+#corpo{
+    background-color: black;
+}
+#title{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#corpo-main{
+    width: 30%;
+    height: 500px;
+    border: 2px solid white;
+    margin: 0 auto;
+    margin-top: 4%;
+    border-radius: 10px;
+    padding: 5px;
+}
+.label{
+    color: white;
+}
+#input-nome, #select-material, #input-data, #select-curso{
+    width:98%;
+    margin: 0 auto;
+}
+#div-buttons{
+    margin-top:15px;
+}
+.button{
+    width: 49%;
+}
