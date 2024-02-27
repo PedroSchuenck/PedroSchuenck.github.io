@@ -1,0 +1,16 @@
+{
+  "name": "pedroschuenck.github.io",
+  "version": "1.0.0",
+  "description": "<hr>\r <br>\r <br>\r <div align=\"center\">\r   <a href=\"https://github.com/PedroSchuenck\">\r   <img height=\"150px\" src=\"https://github-readme-stats.vercel.app/api?username=PedroSchuenck&how_icons=true&theme=chartreuse-dark&include_all_commits=true&count_private=true\"/>\r   <img height=\"150px\" src=\"https://github-readme-stats.vercel.app/api/top-langs/?username=PedroSchuenck&layout=compact&langs_count=7&theme=chartreuse-dark\"/>\r     <br> <br>\r     <a href=\"https://github.com/PedroSchuenck\">\r   <img align=\"center\" src=\"https://github-readme-stats.vercel.app/api/top-langs/?username=PedroSchuenck&theme=chartreuse-dark&hide_langs_below=1\" />\r </a>\r </div>\r <br>\r <br>\r <div style=\"display: inline_block\"  align=\"center\">\r   <br>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1"
+  }
+}
