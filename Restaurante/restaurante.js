@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    alert("pedro vai comer")
     let url = "https://rafaelescalfoni.github.io/desenv_web/restaurante/items.json";
     let divCardapio = document.getElementById("cardapio");
     let divCarrinho = document.getElementById("carrinho");
