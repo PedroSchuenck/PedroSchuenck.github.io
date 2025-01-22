@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Schuenck Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <script defer src="/SchuenckHome/js/login.js"></script>
+    <link rel="stylesheet" href="/SchuenckHome/css/login.css">
+</head>
+<body>
+    <img src="/SchuenckHome/img/login.jpg" id="img-login" alt="img-login">
+    <p id="title-main">Schuenck<span id="span-login">Home</span></p>
+    <div id="div-form">
+        <form id="form" class="form-group" method="post" action="">
+            <h1 id="title-form">Login</h1>
+            <div id="div-username-form" class="divs-form">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" class="input-form form-control" placeholder= "Nome do usuário..." maxlength="10" required>
+            </div>
+            <div id="div-password-form" class="divs-form">
+                <label for="password">Senha</label>
+                <input type="password" id="password" class="input-form form-control" placeholder="Digite sua senha" maxlength="10" required>
+            </div>
+            <div id="div-buttons-form" class="divs-form">
+                <input type="submit" id="submit-form" class="buttons-form btn btn-primary" value="Entrar">
+                <input type="reset" id="reset-form" class="buttons-form btn btn-primary" value="Limpar">
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
