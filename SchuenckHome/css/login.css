@@ -2,19 +2,22 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: #d1ebfe;
+}
 #div-form{   
     display: flex;
     justify-content: center;
-
 }
 #form{
     display: inline-block;
     padding: 50px;
-    width: 30%;   
-    border-radius: 10px;
+    width: 50%;   
+    border: solid 1px rgb(132, 175, 209);
+    border-radius: 20px;
     background-color:whitesmoke;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #div-buttons-form{
@@ -52,4 +55,30 @@
 #span-login{
     margin-left: 20px;
     color: rgb(132, 175, 209);
+}
+#modal-login{
+    width: 25%;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d1ebfe;
+    display: inline-block;
+    border: 1px solid rgb(132, 175, 209);
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.bi-x-lg{
+    display: flex;
+    justify-content:flex-end;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+#div-text-modal{
+    background-color: #fff;
 }
