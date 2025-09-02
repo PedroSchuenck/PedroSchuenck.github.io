@@ -1,6 +1,7 @@
 programa
 {
-	const inteiro LINHA = 3
+	
+	const inteiro LINHA = 3
 	const inteiro COLUNA = 5
 	
 	funcao inicio()
@@ -31,6 +32,7 @@ programa
 		escreva("\n34O maior número é : ",maior)
 	}
 }
+
 
 /* $$$ Portugol Studio $$$ 
  * 
