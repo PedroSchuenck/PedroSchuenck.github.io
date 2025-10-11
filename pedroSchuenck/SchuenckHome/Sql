@@ -1,5 +1,0 @@
-create table login(
-    idlogin int primary key auto_increment,
-    user varchar(20),
-    senha varchar(8);
-)
