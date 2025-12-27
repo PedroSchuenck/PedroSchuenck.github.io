@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schuenck Specialty Coffee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+
+    <header class="top-nav">
+        <div class="container nav-content">
+            <div class="logo">
+                SCHUENCK <span>CAFÉ</span>
+            </div>
+            <nav class="menu-links">
+                <a href="#" data-link="inicio">Início</a>
+                <a href="#" data-link="menu" class="active">Menu</a>
+                <a href="#" data-link="sobre">Sobre</a>
+                <a href="#" data-link="contato">Contato</a>
+            </nav>
+            <div class="header-info">
+                <span>Nova Friburgo, RJ</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <section class="products-area">
+            <header class="section-header">
+                <h2>Menu de Especialidades</h2>
+                <p>Grãos selecionados e torrefação artesanal.</p>
+            </header>
+
+            <div class="products-grid" id="grid-produtos">
+                </div>
+        </section>
+
+        <aside class="checkout-area">
+            <div class="order-summary">
+                <div class="summary-header">
+                    <h3>Resumo do Pedido</h3>
+                </div>
+                
+                <div id="cart-items" class="cart-items-list">
+                    </div>
+
+                <div class="summary-footer">
+                    <div class="total-line">
+                        <span>Total do Pedido</span>
+                        <strong id="cart-total">R$ 0,00</strong>
+                    </div>
+                    <div class="actions">
+                        <button id="btn-limpar" class="btn-outline">Limpar Tudo</button>
+                        <button id="btn-finalizar" class="btn-primary">Finalizar Pedido</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Pedro Schuenck - Desenvolvedor Full Stack | CEFET/RJ</p>
+        </div>
+    </footer>
+
+    <script src="./js/cafeteira.js"></script>
+</body>
+</html>
