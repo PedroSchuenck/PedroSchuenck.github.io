@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>.
+<agenda-telefonica>
+<contato>
+<nome>Pedro gabriel schuenck</nome>
+<endereco>Rua emanoel elis perrot</endereco>
+<home>25276079</home>
+<work>22997491353</work>
+</contato>
+<contato>
+    <nome>gaspar gabriel</nome>
+    <endereco>Rua monteiro ferraz</endereco>
+    <home>25278096</home>
+    <work>2299876543</work>
+    </contato>
+    <contato>
+        <nome> gabriel bittencourt</nome>
+        <endereco>Rua taldo mario</endereco>
+        <home>25275423</home>
+        <work>2299876543</work>
+        </contato>
+
+</agenda-telefonica>
