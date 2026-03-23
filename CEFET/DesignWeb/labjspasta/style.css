@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+}
+#title{
+    color: white;
+    text-align: center;
+}
+#content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.link{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+.link:hover{
+    transform: scale(1.1);
+    color: aqua;
+}
