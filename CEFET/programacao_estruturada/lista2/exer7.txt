@@ -1,0 +1,15 @@
+Seja X a seguinte sentença: “elefantes são mais pesados que gafanhotos”. 
+Desenvolva a expressão:
+
+!(!X && X) && (!X || X) 
+!(F && V) &&  (F || V)
+!F && V
+V && V
+V
+
+8. Você conseguiria avaliar a expressão da questão 7 desconhecendo o valor de X? Justifique.
+Sim, essa expressão será sempre verdadeira, independentemente do valor de X.
+
+Isso acontece porque, na parte !X&&X, estamos usando uma porta AND, na qual ambos os valores precisariam ser verdadeiros ao mesmo tempo. Porém, isso nunca acontece, pois X e !X são opostos: se um é verdadeiro, o outro é falso. Logo, !X&&X é sempre falso. Como essa expressão está negada, !(!X&&X) será sempre verdadeira.
+
+Já na parte !X∣∣X, temos uma porta OR, em que basta um dos valores ser verdadeiro para o resultado também ser verdadeiro. Como X e !X são opostos, sempre haverá um deles verdadeiro. Assim, !X∣∣X também será sempre verdadeira.
